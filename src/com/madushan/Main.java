@@ -11,10 +11,21 @@ public class Main {
         System.out.print("Enter your desired String :");
         String s = scanner.next();
 
-//        printing the split array
+//        split the array
         String[] newS = s.split("", s.length());
+
+//        print the array
         for(int i = 0; i < newS.length; i++) {
             System.out.print(newS[i]);
         }
+
+        if(1 < newS.length && 10000 > newS.length) {
+            for(int j=0; j < newS.length; j++) {
+                if (newS[j] != "{" && newS[j] != "}" && newS[j] != "[" && newS[j] != "]" && newS[j] != "(" && newS[j] != ")") {
+                    System.out.println("Enter valid elements");
+                }
+            }
+        }
+
     }
 }
