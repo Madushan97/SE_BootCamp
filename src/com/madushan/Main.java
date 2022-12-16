@@ -4,28 +4,38 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
 
-//        getting a string from user
+    public static void main(String[] array) {
+
+        int top = 0;
+
+//        getting user input
         var scanner = new Scanner(System.in);
-        System.out.print("Enter your desired String :");
-        String s = scanner.next();
+        System.out.print("Enter the String... :");
+        String userInput = scanner.next();
 
-//        split the array
-        String[] newS = s.split("", s.length());
+//        split the array and put into stack
+        String[] userSplitArray = userInput.split("", userInput.length());
 
-//        print the array
-        for(int i = 0; i < newS.length; i++) {
-            System.out.print(newS[i]);
+//        print the split array vertically
+        for (String n : userSplitArray) {
+            System.out.println(n);
         }
 
-        if(1 < newS.length && 10000 > newS.length) {
-            for(int j=0; j < newS.length; j++) {
-                if (newS[j] != "{" && newS[j] != "}" && newS[j] != "[" && newS[j] != "]" && newS[j] != "(" && newS[j] != ")") {
-                    System.out.println("Enter valid elements");
-                }
-            }
+//        creat a string stack
+        String[] stack = new String[userSplitArray.length];
+
+//        split array in to the stack
+
+//        userSplitArray elements into the stack one by one
+        for(int i=0; i < userSplitArray.length; i++) {
+             stack[top] = userSplitArray[i];
         }
+
+
+
 
     }
+
+
 }
