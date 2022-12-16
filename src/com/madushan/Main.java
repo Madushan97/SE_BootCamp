@@ -32,41 +32,64 @@ public class Main {
              top++;
         }
 
-//        print the stack
-//        for(String n : stack) {
-//            System.out.println(n);
-//        }
-
 //        conditions checking
         for (int j=0; j < stack.length; j++) {
             switch (stack[j]) {
 //                case (
                 case "(" :
 //                    if 0 index has (
-                    if (stack[j] == "(") {
+                    if (stack[j].equals("(")) {
 //                        checking  whether ) is there or not
                         for (int k=0; k < stack.length; k++) {
-                            if(stack[k+1] == ")"){
+                            if(stack[k+1].equals(")")){
                                 System.out.println(") found");
                             }
                         }
+                    } else {
+//                        if someone add close bracket first, then it shows false
+                        if (stack[j].equals(")")) {
+                            System.out.println("False");
+                        }
                     }
+
+//                 case [
                 case "[" :
-                    if (stack[j] == "[") {
+//                     if 0 index has [
+                    if (stack[j].equals("[")) {
+//                        checking  whether ] is there or not
                         for (int k=0; k < stack.length; k++) {
-                            if(stack[k+1] == "]"){
+                            if(stack[k+1].equals("]")){
                                 System.out.println("] found");
                             }
                         }
+                    } else {
+//                        if someone add close bracket first, then it shows false
+                        if (stack[j].equals("]")) {
+                            System.out.println("False");
+                        }
                     }
+//                 case {
                 case "{" :
-                    if (stack[j] == "{") {
+//                     if 0 index has [
+                    if (stack[j].equals("{")) {
+//                        checking  whether } is there or not
                         for (int k=0; k < stack.length; k++) {
-                            if(stack[k+1] == "}"){
+                            if(stack[k+1].equals("}")){
                                 System.out.println("} found");
                             }
                         }
+                    } else {
+//                        if someone add close bracket first, then it shows false
+                        if (stack[j].equals("}")) {
+                            System.out.println("False");
+                        }
                     }
+
+                default:
+//                    print the stack
+                    for(String n : stack) {
+                    System.out.println(n);
+            }
             }
         }
     }
