@@ -13,85 +13,85 @@ public class Main {
         System.out.print("Enter the String... :");
         String userInput = scanner.next();
 
-//        split the array and put into stack
+//        split the array
         String[] userSplitArray = userInput.split("", userInput.length());
-
-//        print the split array vertically
-//        for (String n : userSplitArray) {
-//            System.out.println(n);
-//        }
 
 //        creat a string stack
         String[] stack = new String[userSplitArray.length];
 
-//        split array in to the stack
+//      iterate userSplitArray (Main iteration)
+        for( int l=0; l < userSplitArray.length; l++) {
 
-//        userSplitArray elements into the stack one by one
-        for(int i=0; i < userSplitArray.length; i++) {
-             stack[top] = userSplitArray[i];
-             top++;
-        }
+//        taking the valid inputs
+            if (userSplitArray[l] == "(" || userSplitArray[l] == "{" || userSplitArray[l] == "[" ) {
 
-//        conditions checking
-        for (int j=0; j < stack.length; j++) {
-            switch (stack[j]) {
+//        if the inputs are correct, userSplitArray into the stack one by one
+                for(int i=0; i < userSplitArray.length; i++) {
+                    stack[top] = userSplitArray[i];
+                    top++;
+                }
+
+                    switch (stack[l]) {
 //                case (
-                case "(" :
+                        case "(" :
 //                    if 0 index has (
-                    if (stack[j].equals("(")) {
+                            if (stack[l].equals("(")) {
 //                        checking  whether ) is there or not
-                        for (int k=0; k < stack.length; k++) {
-                            if(stack[k+1].equals(")")){
-                                System.out.println(") found");
-                            }
-                        }
-                    } else {
+                                for (int k=0; k < stack.length; k++) {
+                                    if(stack[k+1].equals(")")){
+                                        System.out.println(") found");
+                                    }
+                                }
+                            } else {
 //                        if someone add close bracket first, then it shows false
-                        if (stack[j].equals(")")) {
-                            System.out.println("False");
-                        }
-                    }
+                                if (stack[l].equals(")")) {
+                                    System.out.println("You enter ) first");
+                                }
+                            }
 
 //                 case [
-                case "[" :
+                        case "[" :
 //                     if 0 index has [
-                    if (stack[j].equals("[")) {
+                            if (stack[l].equals("[")) {
 //                        checking  whether ] is there or not
-                        for (int k=0; k < stack.length; k++) {
-                            if(stack[k+1].equals("]")){
-                                System.out.println("] found");
-                            }
-                        }
-                    } else {
+                                for (int k=0; k < stack.length; k++) {
+                                    if(stack[k+1].equals("]")){
+                                        System.out.println("] found");
+                                    }
+                                }
+                            } else {
 //                        if someone add close bracket first, then it shows false
-                        if (stack[j].equals("]")) {
-                            System.out.println("False");
-                        }
-                    }
+                                if (stack[l].equals("]")) {
+                                    System.out.println("You enter ] first");
+                                }
+                            }
 //                 case {
-                case "{" :
+                        case "{" :
 //                     if 0 index has [
-                    if (stack[j].equals("{")) {
+                            if (stack[l].equals("{")) {
 //                        checking  whether } is there or not
-                        for (int k=0; k < stack.length; k++) {
-                            if(stack[k+1].equals("}")){
-                                System.out.println("} found");
-                            }
-                        }
-                    } else {
+                                for (int k=0; k < stack.length; k++) {
+                                    if(stack[k+1].equals("}")){
+                                        System.out.println("} found");
+                                    }
+                                }
+                            } else {
 //                        if someone add close bracket first, then it shows false
-                        if (stack[j].equals("}")) {
-                            System.out.println("False");
-                        }
-                    }
+                                if (stack[l].equals("}")) {
+                                    System.out.println("You enter } first");
+                                }
+                            }
 
-                default:
+                        default:
 //                    print the stack
-                    for(String n : stack) {
-                    System.out.println(n);
+                            for(String n : stack) {
+                                System.out.println(n);
+                            }
+                    }
+                } else {
+                System.out.println("False");
             }
-            }
+             }
+
         }
     }
-
-}
