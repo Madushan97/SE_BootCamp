@@ -18,14 +18,16 @@ public class Main {
             System.out.print(i + ", ");
         }
         System.out.println();
+
 //  print the median
         Median(numberArray);
 
 //  Highest Values
-    int high = highestVal.Highest_Value(numberArray);
+        int high = highestVal.Highest_Value(numberArray);
         System.out.println("Highest Value is : " + high);
 
-
+//  Mode
+        highestVal.Mode(numberArray);
     }
 
 //  for median
