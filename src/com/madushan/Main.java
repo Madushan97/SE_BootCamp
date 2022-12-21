@@ -9,6 +9,7 @@ public class Main {
 //  create an instance of SortAndMath class and Math
         var sort = new SortAndMath();
         Math highestVal = new Math();
+        Math primeNumber = new Math();
 
 //  sort the array
         sort.bubbleSort(numberArray);
@@ -28,6 +29,9 @@ public class Main {
 
 //  Mode
         highestVal.Mode(numberArray);
+
+//    prime numbers
+        primeNumber.PrimeNumber(numberArray);
     }
 
 //  for median
@@ -37,4 +41,6 @@ public class Main {
         float median = a[((arraySize+1)/2)-1];
         System.out.println("Median is : " + median);
     }
+
+
 }
