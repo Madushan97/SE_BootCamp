@@ -1,4 +1,4 @@
 package com.madushan;
 
-public class MathStudent extends Student{
+public class MathStudent extends Student {
 }

@@ -1,4 +1,5 @@
 package com.madushan;
 
-public class EnglishStudent extends Student{
+public class EnglishStudent implements Student {
+
 }
