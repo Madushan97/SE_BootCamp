@@ -43,10 +43,12 @@ public class Student {
         }
     }
 
+//    number of student
     public void NumberOfStudent(File inputfilename) {
         try {
             String line;
             BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
+//            first line is the number of student
             int number_of_student = Integer.parseInt(reader.readLine());
             System.out.println(number_of_student);
             reader.close();
