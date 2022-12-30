@@ -15,12 +15,24 @@ public class Main {
 
 //        file read
         Student student1 = new Student();
-//        student1.ShowFileContent(fileName);
+        System.out.println("\n* * * * File Content * * * *\n");
+        student1.ShowFileContent(fileName);
 
 //        number fo student
-//        student1.NumberOfStudent(fileName);
+        System.out.println("\n* * * * Number of Student * * * *\n");
+        student1.NumberOfStudent(fileName);
 
+//        for English grade
+        System.out.println("\n* * * * Marks for each individuals * * * *\n");
         EnglishStudent eng = new EnglishStudent();
         eng.EnglishMarksAverage(fileName);
+
+//        for Science grade
+        ScienceStudent sci = new ScienceStudent();
+        sci.ScienceMarksAverage(fileName);
+
+//        for Math grade
+        MathStudent math = new MathStudent();
+        math.MathMarksAverage(fileName);
     }
 }
