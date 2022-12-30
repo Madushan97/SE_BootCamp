@@ -29,17 +29,18 @@ public class Student {
 
 //    to import input file
     public void FileReader(File inputfilename) {
-        try {
-            String line;
-            BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
-            while((line = reader.readLine()) != null) {
-                System.out.println(line);
+
+            try {
+                String line;
+                BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
+                while((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-    }
 
 //    show the content of the file
     public void ShowList() {
