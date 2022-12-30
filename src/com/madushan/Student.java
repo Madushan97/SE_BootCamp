@@ -10,12 +10,12 @@ public class Student {
     private String last_Name;
     private String course;
 
-//    to export result file
+    //    to export result file
     public void FileWriter() {
         try {
             List<String> student = new ArrayList<String>();
 
-            BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("n.txt"));
             Scanner scan = new Scanner(System.in);
             writer.write("Hi");
             writer.close();
@@ -27,24 +27,48 @@ public class Student {
         }
     }
 
-//    to import input file
-    public void FileReader(File inputfilename) {
+    //    show content of the file
+    public void ShowFileContent(File inputfilename) {
 
-            try {
-                String line;
-                BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
-                while((line = reader.readLine()) != null) {
-                    System.out.println(line);
-                }
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+        try {
+            String line;
+            BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
             }
+            reader.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
 
-//    show the content of the file
-    public void ShowList() {
+    public void NumberOfStudent(File inputfilename) {
+        try {
+            String line;
+            BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
+            int number_of_student = Integer.parseInt(reader.readLine());
+            System.out.println(number_of_student);
+            reader.close();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //    show the content of the file
+    public void ShowList(File inputfilename) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
+            String line;
+            while((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //    getters
