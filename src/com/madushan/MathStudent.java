@@ -29,17 +29,17 @@ public class MathStudent extends Student {
 
 //                    Grade ("You" should replace with his/her name and it located in above line)
                     if(avgMath > 90) {
-                        System.out.println("Grade A for Math and you have got " + avgMath);
+                        FileWriter("Grade A for Math and you have got " + avgMath);
                     } else if (avgMath > 80 && avgMath <=90 ) {
-                        System.out.println("Grade B for Math and you have got " + avgMath);
+                        FileWriter("Grade B for Math and you have got " + avgMath);
                     } else if (avgMath >70 && avgMath <=80 ) {
-                        System.out.println("Grade C for Math and you have got " + avgMath);
+                        FileWriter("Grade C for Math and you have got " + avgMath);
                     } else if (avgMath > 60 && avgMath <= 70 ) {
-                        System.out.println("Grade S for Math and you have got " + avgMath);
+                        FileWriter("Grade S for Math and you have got " + avgMath);
                     } else if (avgMath > 50 && avgMath <= 60 ) {
-                        System.out.println("Grade D for Math and you have got " + avgMath);
+                        FileWriter("Grade D for Math and you have got " + avgMath);
                     } else if (avgMath > 40 && avgMath <= 50 ) {
-                        System.out.println("Grade E for Math and you have got " + avgMath);
+                        FileWriter("Grade E for Math and you have got " + avgMath);
                     }
                 }
             }

@@ -26,17 +26,17 @@ public class EnglishStudent extends Student {
 
 //                    Grade
                     if(avgEnglish > 90) {
-                        System.out.println("Grade A for English and you have got " + avgEnglish);
+                        FileWriter("Grade A for English and you have got " + avgEnglish);
                     } else if (avgEnglish > 80 && avgEnglish <=90 ) {
-                        System.out.println("Grade B for English and you have got " + avgEnglish);
+                        FileWriter("Grade B for English and you have got " + avgEnglish);
                     } else if (avgEnglish >70 && avgEnglish <=80 ) {
-                        System.out.println("Grade C for English and you have got " + avgEnglish);
+                        FileWriter("Grade C for English and you have got " + avgEnglish);
                     } else if (avgEnglish > 60 && avgEnglish <= 70 ) {
-                        System.out.println("Grade S for English and you have got " + avgEnglish);
+                        FileWriter("Grade S for English and you have got " + avgEnglish);
                     } else if (avgEnglish > 50 && avgEnglish <= 60 ) {
-                        System.out.println("Grade D for English and you have got " + avgEnglish);
+                        FileWriter("Grade D for English and you have got " + avgEnglish);
                     } else if (avgEnglish > 40 && avgEnglish <= 50 ) {
-                        System.out.println("Grade E for English and you have got " + avgEnglish);
+                        FileWriter("Grade E for English and you have got " + avgEnglish);
                     }
                 }
             }

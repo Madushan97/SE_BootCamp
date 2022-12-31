@@ -1,8 +1,6 @@
 package com.madushan;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Student {
@@ -11,23 +9,42 @@ public class Student {
     private String course;
 
     //    to export result file
-    public void FileWriter() {
+    public void FileWriter(String write) {
         try {
-            List<String> student = new ArrayList<String>();
-
-            BufferedWriter writer = new BufferedWriter(new FileWriter("n.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
             Scanner scan = new Scanner(System.in);
-            writer.write("Hi");
+            writer.write(write);
             writer.close();
-
-            System.out.println(student);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    //    show content of the file
+    public String StudentName(File fileName) {
+
+        try {
+            String line;
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            while ((line = reader.readLine()) != null) {
+                String[] studentNames = new String[4];
+
+                for (int i=1; i <= line.length(); i+=2) {
+                    studentNames = line.split(",",2);
+                    System.out.println("Line"+line.length());
+                }
+                BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+                Scanner scan = new Scanner(System.in);
+                writer.write(studentNames[1]+ ", " + studentNames[0]);
+                writer.close();
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+        //    show content of the file
     public void ShowFileContent(File inputfilename) {
 
         try {
@@ -44,7 +61,7 @@ public class Student {
     }
 
 //    number of student
-    public void NumberOfStudent(File inputfilename) {
+    public int NumberOfStudent(File inputfilename) {
         try {
             String line;
             BufferedReader reader = new BufferedReader(new FileReader(inputfilename));
@@ -56,6 +73,7 @@ public class Student {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return 0;
     }
 
     //    show the content of the file

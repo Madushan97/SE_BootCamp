@@ -25,17 +25,17 @@ public class ScienceStudent extends Student {
 
 //                    Grade ("You" should replace with his/her name and it located in above line)
                     if(avgScience > 90) {
-                        System.out.println("Grade A for Science and you have got " + avgScience);
+                        FileWriter("Grade A for Science and you have got " + avgScience);
                     } else if (avgScience > 80 && avgScience <=90 ) {
-                        System.out.println("Grade B for Science and you have got " + avgScience);
+                        FileWriter("Grade B for Science and you have got " + avgScience);
                     } else if (avgScience >70 && avgScience <=80 ) {
-                        System.out.println("Grade C for Science and you have got " + avgScience);
+                        FileWriter("Grade C for Science and you have got " + avgScience);
                     } else if (avgScience > 60 && avgScience <= 70 ) {
-                        System.out.println("Grade S for Science and you have got " + avgScience);
+                        FileWriter("Grade S for Science and you have got " + avgScience);
                     } else if (avgScience > 50 && avgScience <= 60 ) {
-                        System.out.println("Grade D for Science and you have got " + avgScience);
+                        FileWriter("Grade D for Science and you have got " + avgScience);
                     } else if (avgScience > 40 && avgScience <= 50 ) {
-                        System.out.println("Grade E for Science and you have got " + avgScience);
+                        FileWriter("Grade E for Science and you have got " + avgScience);
                     }
                 }
             }

@@ -34,5 +34,8 @@ public class Main {
 //        for Math grade
         MathStudent math = new MathStudent();
         math.MathMarksAverage(fileName);
+
+//        outputfile
+//        student1.StudentName(fileName);
     }
 }
