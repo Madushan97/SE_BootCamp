@@ -1,46 +1,27 @@
 package com.madushan;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        int numberArray[] = {47, 84, 75, 21, 14, 14, 79};
+        Employee employee = new Employee();
+        Scanner scanner = new Scanner(System.in);
 
-//  create an instance of SortAndMath class and Math
-        var sort = new SortAndMath();
-        Math highestVal = new Math();
-        Math primeNumber = new Math();
+        System.out.print("Per day payment : ");
+        int per_day_payment = Integer.parseInt(scanner.nextLine());
+        employee.setPer_day_payment(per_day_payment);
 
-//  sort the array
-        sort.bubbleSort(numberArray);
+        System.out.print("Per day payment : ");
+        int no_of_days = Integer.parseInt(scanner.nextLine());
+        employee.setNo_of_days(no_of_days);
 
-//  print the sorted array
-        for(int i: numberArray) {
-            System.out.print(i + ", ");
-        }
-        System.out.println();
+        Main_Thread main_thread = new Main_Thread();
+        Thread main = new Thread(main_thread);
+        main.start();
 
-//  print the median
-        Median(numberArray);
 
-//  Highest Values
-        int high = highestVal.Highest_Value(numberArray);
-        System.out.println("Highest Value is : " + high);
 
-//  Mode
-        highestVal.Mode(numberArray);
-
-//    prime numbers
-        primeNumber.PrimeNumber(numberArray);
     }
-
-//  for median
-    public static void Median(int array[]) {
-        int arraySize = array.length;
-        int a[] = array;
-        float median = a[((arraySize+1)/2)-1];
-        System.out.println("Median is : " + median);
-    }
-
-
 }
